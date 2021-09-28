@@ -32,7 +32,7 @@ function validate(input) {
     } else if (input.password.length < 6) {
         errors.password = 'La contraseña debe tener más de 6 caracteres';
     }
-    if(!input.terms){
+    if (!input.terms) {
         errors.terms = 'Debes aceptar los términos y condiciones'
     }
     return errors;
@@ -49,17 +49,17 @@ export const SignUp = () => {
         industry: '',
         email: '',
         password: '',
-        terms:false,
+        terms: false,
     })
     const [errors, setErrors] = useState({});
-    const[showPassword, setShowPassword] = useState(false)
-    
-    useEffect(()=>{
-        setErrors(validate(state));
-    },[state])
+    const [showPassword, setShowPassword] = useState(false)
 
-    const handleChange =  event => {
-         setState({ ...state, [event.target.name]: event.target.value, })
+    useEffect(() => {
+        setErrors(validate(state));
+    }, [state])
+
+    const handleChange = event => {
+        setState({ ...state, [event.target.name]: event.target.value, })
     }
 
     const handleSubmit = async (event) => {
@@ -83,7 +83,7 @@ export const SignUp = () => {
                 <h1>beti</h1>
             </div>
             <form onSubmit={handleSubmit} className='signup_form'>
-                <h3>  <BsChevronLeft className='icon'/> Registra tu negocio </h3>
+                <h3>  <BsChevronLeft className='icon' /> Registra tu negocio </h3>
                 <label htmlFor='text'>Nombre del negocio</label>
                 <input className={errors.name && 'danger'} type='text' id='name' name='name' value={state.name} placeholder='Escribe Aquí' onChange={handleChange} />
                 {errors.name && (
@@ -108,16 +108,18 @@ export const SignUp = () => {
                 {errors.email && (
                     <p className="danger">{errors.email}</p>
                 )}
-                <label className='signup_label_password' htmlFor='password'>Contraseña</label>
-                <input className={errors.password && 'danger'}  type={showPassword?'text':'password'}  id='password' name='password' value={state.password} placeholder='Escribe Aquí' onChange={handleChange} />
-                <BiShow className='signup_icon_eye' onClick={() => setShowPassword(!showPassword)}/>
+                <div className='signup_label_password'>
+                    <label htmlFor='password'>Contraseña</label>
+                    <input className={errors.password && 'danger'} type={showPassword ? 'text' : 'password'} id='password' name='password' value={state.password} placeholder='Escribe Aquí' onChange={handleChange} />
+                    <BiShow className='signup_icon_eye' onClick={() => setShowPassword(!showPassword)} />
+                </div>
                 {errors.password && (
                     <p className="danger">{errors.password}</p>
                 )}
-                <div>
-                    <input type="checkbox"  onChange={() =>setState({...state, terms: !state.terms})}  />
+                <div className='signup_terms'>
+                    <input type="checkbox" onChange={() => setState({ ...state, terms: !state.terms })} />
                     <p>Aceptar <Link to='/'> téminos y condiciones</Link></p>
-                 
+
                 </div>
                 {errors.terms && (
                     <p className="danger">{errors.terms}</p>

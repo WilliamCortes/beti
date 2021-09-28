@@ -36,7 +36,6 @@
 }
 .login_form label{
     font-weight: 600;
-
 }
 
 .login_form input{
@@ -44,6 +43,11 @@
    border-radius: 5px;
    padding-left: 20px;
    border: none;
+   box-shadow: 0 2px 3px rgba( 0 0 0 / 0.15) ;
+
+}
+.login_form input:focus{
+    outline: none;
 }
 .login_password{
     position: relative;
