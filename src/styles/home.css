@@ -37,3 +37,9 @@
     cursor: pointer;
     color: white;
 }
+@media (max-width:900px){
+    .home_section{
+        width: 60vw;
+        margin-left: 15vw;
+    }
+}
