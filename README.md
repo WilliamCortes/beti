@@ -4,7 +4,7 @@
 
 ## Pueder accederla  en:
 
-#https://betiregister.herokuapp.com/
+https://betiregister.herokuapp.com/
 
 
 
