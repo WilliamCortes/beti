@@ -54,8 +54,8 @@
 }
 .login_icon_eye{
     position: absolute;
-     margin-left: 21vw;
-    margin-top: -1vh; 
+    margin-left: 21%;
+    margin-top: -0.5%; 
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -87,7 +87,9 @@
         margin-left: 15vw;
     }
     .login_icon_eye{
-     margin-left: 52vw;
+    margin-left: 54%;
+    margin-top: -1%; 
+
 
     }
     
