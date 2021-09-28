@@ -1,12 +1,10 @@
-# Getting Started with Create React App
+#  Proyecto realizado como un test para Beti.
 
-Proyecto realizado como un test para Beti.
+## Esta app consta de una interface con la posibilidad de que la persona pueda registrarse y luego iniciar sesión.
 
-## Esta app constar en una interface con la posibilidad de que la persona pueda registrarse y luego iniciar sesión.
+## Pueder accederla  en:
 
-# pudes verlos en:
-
-https://betiregister.herokuapp.com/
+#https://betiregister.herokuapp.com/
 
 
 
