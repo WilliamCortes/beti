@@ -20,6 +20,12 @@
     margin: 20px;
 }
 
+.icon{
+    width: 25px;
+    height: 25px;
+    margin: -6px;
+}
+
 .signup_form{
     display: flex;
     flex-direction: column;
@@ -49,6 +55,18 @@
 .signup_form select{
     color: grey;
 }
+
+.signup_label_password{
+    position: relative;
+}
+.signup_icon_eye{
+    position: absolute;
+     margin-left: 19.5vw;
+    margin-top: 13.5vh; 
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
 .signup_form a{
     text-decoration: none;
     font-weight: 600; 
@@ -76,13 +94,25 @@
 .danger{
     font-size: 10px;
     color: red;
-}
 
+}
+@media (max-width:1170px){
+
+    .signup_icon_eye{
+        margin-top: 9vh;
+        margin-left: 18.5vw;
+    }
+
+}
 
 @media (max-width:900px){
 
-.signup_form{
-    width: 60vw;
-    margin-left: 15vw;
-}
+    .signup_form{
+        width: 60vw;
+        margin-left: 15vw;
+    }
+    .signup_icon_eye{
+        margin-top: 13.5vh;
+        margin-left: 54vw;
+    }
 }

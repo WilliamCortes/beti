@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { BsChevronLeft } from 'react-icons/bs';
+import { BiShow } from 'react-icons/bi';
 import '../styles/signup.css';
 
 
@@ -50,6 +52,7 @@ export const SignUp = () => {
         terms:false,
     })
     const [errors, setErrors] = useState({});
+    const[showPassword, setShowPassword] = useState(false)
     
     useEffect(()=>{
         setErrors(validate(state));
@@ -73,7 +76,6 @@ export const SignUp = () => {
             alert('Algunos datos no son válidos')
         }
     }
-
     return (
         <div className='signup'>
             <div className='signup_logo'>
@@ -81,7 +83,7 @@ export const SignUp = () => {
                 <h1>beti</h1>
             </div>
             <form onSubmit={handleSubmit} className='signup_form'>
-                <h3>  Registra tu negocio </h3>
+                <h3>  <BsChevronLeft className='icon'/> Registra tu negocio </h3>
                 <label htmlFor='text'>Nombre del negocio</label>
                 <input className={errors.name && 'danger'} type='text' id='name' name='name' value={state.name} placeholder='Escribe Aquí' onChange={handleChange} />
                 {errors.name && (
@@ -106,18 +108,20 @@ export const SignUp = () => {
                 {errors.email && (
                     <p className="danger">{errors.email}</p>
                 )}
-                <label htmlFor='password'>Contraseña</label>
-                <input className={errors.password && 'danger'} type='password' id='password' name='password' value={state.password} placeholder='Escribe Aquí' onChange={handleChange} />
+                <label className='signup_label_password' htmlFor='password'>Contraseña</label>
+                <input className={errors.password && 'danger'}  type={showPassword?'text':'password'}  id='password' name='password' value={state.password} placeholder='Escribe Aquí' onChange={handleChange} />
+                <BiShow className='signup_icon_eye' onClick={() => setShowPassword(!showPassword)}/>
                 {errors.password && (
                     <p className="danger">{errors.password}</p>
                 )}
                 <div>
                     <input type="checkbox"  onChange={() =>setState({...state, terms: !state.terms})}  />
                     <p>Aceptar <Link to='/'> téminos y condiciones</Link></p>
-                    {errors.terms && (
+                 
+                </div>
+                {errors.terms && (
                     <p className="danger">{errors.terms}</p>
                 )}
-                </div>
                 <button className='signup_button' type='submit'> Registrar mi cuenta</button>
                 <p>¿Ya tines una cuenta? <Link to='/login'>Inicia Sesión</Link></p>
             </form>
