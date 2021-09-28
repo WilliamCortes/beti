@@ -123,7 +123,7 @@ export const SignUp = () => {
                     <p className="danger">{errors.terms}</p>
                 )}
                 <button className='signup_button' type='submit'> Registrar mi cuenta</button>
-                <p>¿Ya tines una cuenta? <Link to='/login'>Inicia Sesión</Link></p>
+                <p>¿Ya tienes una cuenta? <Link to='/login'>Inicia Sesión</Link></p>
             </form>
         </div>
     )
