@@ -1,84 +1,76 @@
-.login{
+.register{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100vw;
 }
 
-.login_logo{
+.register_logo{
     display: flex;
     margin: 40px 0 0 80px;
     
 }
-.login_logo img{
+.register_logo img{
     width: 140px;
     height: 140px;
 }
-.login_logo h1{
+.register_logo h1{
     color: white;
     font-size: 80px;
     margin: 20px;
 }
 
-.login_form{
+.register_form{
     display: flex;
     flex-direction: column;
-    width: 22vw;
-    height: 86vh;
-    margin: 3vw 10vw 3vw 0;
+    width: 24vw;
+    height: 60vh;
+    margin: 9vw 10vw 9vw 0;
     padding: 0 5vw;
     background-color: #EFEFEF;
     border-radius: 8px;
     justify-content:space-evenly ;
 }
-.login_form h3{
+.register_form h3{
     font-weight: 100;
 }
-.login_form label{
+.register_form label{
     font-weight: 600;
 
 }
 
-.login_form input, .login_form select{
+.register_form input{
    height: 30px;
    border-radius: 5px;
    padding-left: 20px;
    border: none;
-   box-shadow: 1px 1px 1px 1px #F5F5F5 ;
 }
-.login_form select{
-    color: grey;
-}
-.login_form a{
+
+.register_form a{
     text-decoration: none;
-    font-weight: 600; 
-    color: black;   
-}
-.login_form div{
-    display: flex;
-}
-.login_form div input{
-    width: 20px;
-    margin-top: 10px;
+    font-weight: 700; 
+    color: black;
 
 }
-.login_button{
+.register_button{
     background-color: rgb(0,191,165);
-    min-height: 30px;
+    border: none;
+    border-radius: 5px;
+    min-height: 35px;
     color: white;
     font-weight: 600;
 }
-
-.danger{
-    font-size: 10px;
-    color: red;
+.register_button:hover{
+    cursor: pointer;
 }
 
+.register_div{
+    text-align: center;
+}
 
 @media (max-width:700px){
-
-.login_form{
-    width: 70vw;
-    margin-left: 15vw;
-}
+    .register_form{
+        width: 70vw;
+        margin-left: 15vw;
+    }
 }
