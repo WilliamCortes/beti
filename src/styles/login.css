@@ -3,8 +3,12 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100vw;
-}
-
+    background-image: url('https://i.imgur.com/p4TA5dD.png');
+    background-repeat: no-repeat;
+    background-size: 2000px 800px;
+    background-position-x: -400px;  
+  }
+  
 .login_logo{
     display: flex;
     margin: 40px 0 0 80px;
@@ -43,7 +47,7 @@
    border-radius: 5px;
    padding-left: 20px;
    border: none;
-   box-shadow: 0 2px 3px rgba( 0 0 0 / 0.15) ;
+   box-shadow: 0 2px 3px rgba( 0 0 0 / 0.15);
 
 }
 .login_form input:focus{
@@ -81,6 +85,12 @@
     text-align: center;
 }
 
+@media(min-width:1600px){
+    body{
+      background-size: 2350px 1000px;
+    }
+}
+
 @media (max-width:900px){
     .login_form{
         width: 60vw;
@@ -89,8 +99,6 @@
     .login_icon_eye{
     margin-left: 54%;
     margin-top: -1%; 
-
-
     }
     
 }
