@@ -7,9 +7,9 @@
 	width: 90%;
 }
 
-.progress-done {
+.progress_done {
     background-color: #287cb8;
-	border-radius: 20px;
+	border-radius: 20px 0 0 20px;
 	color: #fff;
 	display: flex;
 	align-items: center;
@@ -17,4 +17,15 @@
 	height: 100%;
 	width: 0;
 	opacity: 0;
+}
+
+.progress_line, .progress_number{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 10%;
+}
+
+.progress_number span, .progress_line span{
+    width: 17%;
 }

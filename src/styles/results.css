@@ -9,14 +9,19 @@
 .results section{
     flex-basis: 35%;
 }
+
 .results section + section{
 flex-basis: 50%;
-min-width: 500px;
 }
+.results section + section p ~ p {
+    margin-top: 3rem;
+}
+
 .results_logo img{
     max-width: 15vw;
-    padding-left: 60%;
+    padding-left: 80%;
 }
+
 .results_info button{
     width: 10rem;
     background-color: #287cb8;
@@ -29,6 +34,7 @@ min-width: 500px;
     padding: 10px 30px;
     cursor: pointer;
 }
+
 .results_info button + button{
     background-color: white;
     color: #287cb8;
