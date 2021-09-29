@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavBar } from './NavBar';
+import {Progress} from './Progress';
 import '../styles/results.css';
 
 export const Results = () => {
@@ -15,7 +16,7 @@ export const Results = () => {
                     <div className='results_info'>
 
                         <h1>Despegando ando</h1>
-                        <p>¿Alistandote para despegar! Estás en un momento de aprendizaje
+                        <p>¡Alistandote para despegar! Estás en un momento de aprendizaje
                             continuo, por lo que estás validando tu idea de negocio y atraer o
                             retener tus primeros clientes. Estás buscando la estabilidad
                             financiera y has tenido que invertir esfuerzo y dinero pero no has visto
@@ -32,6 +33,18 @@ export const Results = () => {
                     </div>
                 </section>
                 <section>
+                    <p>Rapidez de crecimiento</p>
+                    <Progress done='30'/>
+                    <p>Aversión al riesgo</p>
+                    <Progress done='50'/>
+                    <p>Protección Legal</p>
+                    <Progress done='30'/>
+                    <p>Estabilidad Financiera</p>
+                    <Progress done='15'/>
+                    <p>Nivel de incertidumbre</p>
+                    <Progress done='80'/>
+                    <p>Planificación tributaria</p>
+                    <Progress done='10'/>
                 </section>
             </div>
         </>

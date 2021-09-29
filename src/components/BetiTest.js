@@ -71,7 +71,7 @@ export const BetiTest = () => {
                                 <input type="radio" name="agreement" value='No' />
                                 <label>No</label>
                             </div>
-                            <label><strong>¿Si te piden que paques el dinero prestado sabes si puedes pagarlo en menos de 1 año?</strong></label>
+                            <label><strong>¿Si te piden que pagues el dinero prestado sabes si puedes pagarlo en menos de 1 año?</strong></label>
                             <div>
                                 <input type="radio" name="topay" value='Si' checked />
                                 <label>Si</label>
@@ -81,7 +81,7 @@ export const BetiTest = () => {
                         </section>
                         <section className='betitest_section'>
                             <label><strong>¿Cuanto tiempo lleva tu negocio operando?</strong></label>
-                            <input type='text' className='betitest_input_text' placeholder='Selwciona una opción' />
+                            <input type='text' className='betitest_input_text' placeholder='Selecciona una opción' />
                             <label><strong>¿Conoces tus deducciones o descuentos de impuesto a la Renta?</strong></label>
                             <div>
                                 <input type="radio" name="tax" value='Si' checked />
@@ -108,7 +108,7 @@ export const BetiTest = () => {
                         <img src='https://i.imgur.com/fzFisPh.png' alt='Logo Beti' />
                     </div>
                     <div className='betitest_modal_info'>
-                        <h2>Queremos ayudate a cumplir tus sueños y llevar a tu negocio al siguiente nivel.</h2>
+                        <h2>Queremos ayudarte a cumplir tus sueños y llevar a tu negocio al siguiente nivel.</h2>
                         <p>Completa las siguientes preguntas</p>
                         <button onClick={() => setModal(!modal)}>Completar ahora</button>
                     </div>

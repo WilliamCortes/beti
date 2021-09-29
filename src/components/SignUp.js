@@ -9,14 +9,14 @@ import '../styles/signup.css';
 function validate(input) {
     let errors = {};
     if (!input.name) {
-        errors.name = 'Nombre es requeredo';
+        errors.name = 'Nombre es requerido';
     } else if (input.name.length > 20) {
         errors.name = 'El nombre puede tener máximo 20 caracteres';
     }
     if (!input.nit) {
         errors.nit = 'El NIT es requerido';
     } else if (!(/^[0-9]+$/.test(input.nit)) || input.nit.length !== 9) {
-        errors.nit = 'El NIT es sólo números 9 números sin comas, ni puntos, ni guiones, ni caracteres especiales';
+        errors.nit = 'El NIT son 9 números sin comas, ni puntos, ni guiones, ni caracteres especiales';
     }
     if (!input.industry) {
         errors.industry = 'La industria es requerida';
