@@ -25,7 +25,9 @@
     width: 100%;
     margin-left: 10%;
 }
-
+.progress_line{
+	margin-top: -8px;
+}
 .progress_number span, .progress_line span{
     width: 17%;
 }

@@ -34,17 +34,17 @@ export const Results = () => {
                 </section>
                 <section>
                     <p>Rapidez de crecimiento</p>
-                    <Progress done='30'/>
+                    <Progress done='31'/>
                     <p>Aversión al riesgo</p>
-                    <Progress done='50'/>
+                    <Progress done='52'/>
                     <p>Protección Legal</p>
-                    <Progress done='30'/>
+                    <Progress done='41'/>
                     <p>Estabilidad Financiera</p>
-                    <Progress done='15'/>
+                    <Progress done='20'/>
                     <p>Nivel de incertidumbre</p>
-                    <Progress done='80'/>
+                    <Progress done='73'/>
                     <p>Planificación tributaria</p>
-                    <Progress done='10'/>
+                    <Progress done='10.5'/>
                 </section>
             </div>
         </>
