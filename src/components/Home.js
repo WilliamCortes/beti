@@ -11,6 +11,7 @@ export const Home = () => {
       <div className='home_section'>
         <h2> Bienvenido a Beti</h2>
       <Link to='/betitest'> Accercer al Test</Link> 
+      <Link to='/obligations'> Ver el calendario de obligaciones</Link> 
 
 
       </div>

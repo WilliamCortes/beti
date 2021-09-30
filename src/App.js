@@ -6,6 +6,7 @@ import { Home } from './components/Home';
 import { BetiTest } from './components/BetiTest';
 import { Results } from './components/Results';
 import { PrivateRoute } from './components/PrivateRoute';
+import { Obligations } from './components/Obligations';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <PrivateRoute exact path='/' component={Home} />
             <PrivateRoute exact path='/betitest' component={BetiTest} />
             <PrivateRoute exact path='/results' component={Results} />
+            <PrivateRoute exact path='/obligations' component={Obligations} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={SignUp} />
           </Switch>

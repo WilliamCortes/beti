@@ -1,0 +1,121 @@
+.obligations{
+    display: flex;
+    background-color: #EFEFEF;
+
+}
+
+.obligations_calendar{
+    display: flex;
+    flex-direction: column;
+
+    width: 70%;
+}
+.obligations_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 3rem;
+    width: 20%;
+    background-color: rgb(0,191,165);
+    border: none;
+    border-radius: 5px;
+    min-height: 35px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 10;
+}
+.obligation_button_icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 4px;
+}
+
+.obligations select{
+    width: 20%;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    background-color: white;
+    padding-left: 8px;
+   box-shadow: 0 2px 3px rgba( 0 0 0 / 0.25);
+   cursor: pointer;
+   z-index: 10;
+
+
+}
+.obligations_buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* calendar */
+
+
+.react-calendar__navigation{
+    display: flex;
+    justify-content: center;
+    margin-top: -7vh;
+    margin-bottom: 8%;
+}
+
+.react-calendar__navigation__label{
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    max-width: 13%;
+    
+}
+
+.react-calendar__navigation__prev2-button, .react-calendar__navigation__next2-button{
+    display: none;
+}
+
+.react-calendar__navigation__arrow, .react-calendar__navigation__next{
+    border: none;
+    margin-top: -0.5%;
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.react-calendar__viewContainer{
+    background-color: white;
+    padding: 3%;
+    border-radius: 5px;
+   box-shadow: 0 2px 3px rgba( 0 0 0 / 0.25);
+    margin-top: -4%;
+}
+
+.react-calendar__month-view__weekdays__weekday{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    border-left: solid 1px gray;
+}
+.react-calendar__month-view__days__day{
+    flex-direction: column;
+    align-items: end;
+    height: 14vh;
+    background-color:white;
+    border: solid 0.5px gray;
+    font-weight: 600;
+    padding-top: 8px;
+}
+.react-calendar__month-view__days__day:hover{
+    background-color: rgb(0,191,165, 0.3);
+
+}
+
+/* modal */
+
+.createredimer{
+    display: flex;
+    background-color: red;
+}
+.createredimer_none{
+    display: none;
+}
