@@ -1,8 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useSelector, useDispatch} from 'react-redux';
+import '../styles/createreminder.css';
+import { showCreateReminder } from '../actions';
+import { AiOutlineClose } from 'react-icons/ai';
+import { AiTwotoneCloseCircle } from 'react-icons/ai';
+
+
+
 
 export const CreateReminder = () => {
 
-    const [state, setState] = useState({ typeRedimer: '', firstRedimer: '', secondRedimer: '', })
+    const dispatch = useDispatch()
+    const [state, setState] = useState({
+        nameRedimer: '',
+        nameTag: '',
+        firstRedimer: '',
+        comment: '',
+        typeRedimer: '',
+        color: '',
+        dateRedimer: '',
+        secondRedimer: '',
+        howRemember: '',
+    })
+    const createReminder = useSelector( state =>state.showCreateReminder)
+
 
     const handleChange = event => {
         setState({ ...state, [event.target.name]: event.target.value, })
@@ -12,34 +33,93 @@ export const CreateReminder = () => {
         event.preventDefault()
     }
     return (
-        <div>
-            <h2>Crear Recordatorio</h2>
+        <div className='create_reminder' >
+            <div className='create_reminder_title'>
+                <h2>Crear Recordatorio</h2>
+                <button onClick={() => dispatch(showCreateReminder(!createReminder))}><AiOutlineClose /></button>
+            </div>
             <form onSubmit={handleSubmit} className='create_reminder_form'>
                 <section>
-                    <label htmlFor='text'>Nombre del recordatorio</label>
-                    <input className='' type='text' placeholder='Escribe aquí' />
-                    <label htmlFor='text'>Nombre de la etiqueta</label>
-                    <input className='' type='text' placeholder='Escribe aquí' />
-                    <label htmlFor='text'>Primer recordatorio*</label>
-                    <input type='date' name='firstRedimer' value={state.firstRedimer} placeholder='Selecciona una opción' onChange={handleChange} />
-                    <label htmlFor='text'>Comentario</label>
-                    <input className='' type='text' placeholder='Escribe aquí' />
+                    <div>
+                        <label htmlFor='text'>Nombre del recordatorio</label>
+                        <input className='create_rem_text' type='text' name='nameRedimer' value={state.nameRedimer} placeholder='Escribe aquí' onChange={handleChange} />
+                    </div>
+                    <div>
+                        <label htmlFor='text'>Nombre de la etiqueta</label>
+                        <input className='create_rem_text' type='text' name='nameTag' value={state.nameTag} placeholder='Escribe aquí' onChange={handleChange} />
+                    </div>
+                    <div>
+                        <label htmlFor='text'>Primer recordatorio*</label>
+                        <select className='create_rem_text' type='text' name='firstRedimer' value={state.firstRedimer} onChange={handleChange} >
+                            <option>Selecciona una opción</option>
+                            <option>1...</option>
+                            <option>2..</option>
+                            <option>3...</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label htmlFor='text'>Comentario</label>
+                        <input className='create_rem_text' type='text' name='comment' value={state.comment} placeholder='Escribe aquí' onChange={handleChange} />
+                    </div>
+
                 </section>
                 <section>
-                    <label htmlFor='text'>Tipo de recordatorio</label>
-                    <select type='text' name='typeRedimer' value={state.typeRedimer} placeholder='Selecciona una opción' onChange={handleChange} >
-                        <option>Legal</option>
-                        <option>Pago impuestos</option>
-                        <option>Deudas Finacieras</option>
-                    </select>
-                    <label htmlFor='text'>Nombre de la etiqueta</label>
-                    <input className='' type='text' placeholder='Escribe aquí' />
-                    <label htmlFor='text'>Primer recordatorio*</label>
-                    <input className='' type='text' placeholder='Selecciona una opci[on' />
-                    <label htmlFor='text'>Comentario</label>
-                    <input className='' type='text' placeholder='Escribe aquí' />
+                    <div>
+                        <label htmlFor='text'>Tipo de recordatorio</label>
+                        <select className='create_rem_text' type='text' name='typeRedimer' value={state.typeRedimer} placeholder='Selecciona una opción' onChange={handleChange} >
+                            <option>Selecciona una opción</option>
+                            <option>Legal</option>
+                            <option>Pago impuestos</option>
+                            <option>Deudas Finacieras</option>
+                        </select>
+                    </div>
+                    <span className='create_reminder_color_date'>
+                        <div>
+                            <label htmlFor='text'>Color</label>
+                            <select className='create_reminder_select_color' type='text' name='color' value={state.color} onChange={handleChange} >
+                                <option>&#11044;</option>
+                                <option>&#11044;</option>
+                                <option>&#11044;</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label htmlFor='text'>Fecha del recordatorio</label>
+                            <input className='create_reminder_form_date' type='date' name='dateRedimer' value={state.dateRedimer}  onChange={handleChange}  placeholder='Seleciona una fecha' />
+                        </div>
+                    </span>
+                    <div>
+                        <label htmlFor='text'>Segundo recordatorio</label>
+                        <select className='create_rem_text' type='text' name='secondRedimer' value={state.secondRedimer} onChange={handleChange} >
+                            <option>Selecciona una opción</option>
+                            <option>1...</option>
+                            <option>2..</option>
+                            <option>3...</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>
+                            <label>¿Cómo te recordamos?</label>
+                            <div>
+                                <input type="radio" name="howRemember" value='whatsapp' onChange={handleChange} />
+                                <span>Whatsapp</span>
+                            </div>
+                            <div>
+                                <input type="radio" name="howRemember" value='email' onChange={handleChange} />
+                                <span>Correo</span>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="howRemember" value='sms' onChange={handleChange} />
+                                <span>SMS</span>
+                            </div>
+                        </span>
+                    </div>
                 </section>
+                <span>
+                    <button type='submit'>Agregar</button>
+                </span>
             </form>
-        </div>
+        </div >
     )
 }
+

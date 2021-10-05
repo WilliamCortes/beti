@@ -1,0 +1,122 @@
+.create_reminder{
+    background-color: #f8f5f5;
+    box-shadow: 0 2px 3px rgba( 0 0 0 / 0.15) ;
+    width: 50vw;
+    height: 75vh;
+    border-radius: 10px;
+}
+
+.create_reminder_title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.create_reminder_title h2{
+    margin-left: 5%;
+}
+
+.create_reminder_title button{
+    background-color: #f8f5f5;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    height: 35px;
+    margin: 6px 6px 0 0;
+    padding: 0;
+}
+
+
+.create_reminder_form{
+    display: flex;  
+}
+
+.create_reminder_form section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    margin: 5%;
+}
+
+.create_reminder_form section div{
+    display: flex;
+    flex-direction: column;
+}
+.create_reminder_form section div span{
+    /* margin-bottom: -20px; */
+}
+.create_reminder_form section div span div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.create_reminder_form section div span div input{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.create_rem_text{
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 20px;
+    border: none;
+    box-shadow: 0 2px 3px rgba( 0 0 0 / 0.15) ;
+}
+
+.create_reminder_form section div label{
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.create_reminder_color_date{
+    display: flex;
+    flex-direction: row;
+    margin-top: -10px;
+}
+.create_reminder_color_date div{
+    display: flex;
+    flex-direction: column;
+}
+/* .create_reminder_color_date + div{
+    margin-top: -30px;
+} */
+.create_reminder_select_color{
+    height: 30px;
+    width: 50px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba( 0 0 0 / 0.15) ;
+}
+
+.create_reminder_select-color:focus{
+    outline: none;
+}
+
+
+.create_reminder_form_date{
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 20px;
+    border: none;
+    box-shadow: 0 2px 3px rgba( 0 0 0 / 0.15) ;
+}
+
+/* input[type=date]::-webkit-datetime-edit {
+    color: transparent;
+} */
+
+.create_reminder span button{
+    background-color: rgb(0,191,165);
+    color: white;
+    font-weight: 600;
+    min-width: 20%;
+    min-height: 35px;
+    margin: 54% 0 0 -22%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+}

@@ -1,15 +1,14 @@
 .obligations{
     display: flex;
     background-color: #EFEFEF;
-
 }
 
 .obligations_calendar{
     display: flex;
     flex-direction: column;
-
     width: 70%;
 }
+
 .obligations_button{
     display: flex;
     justify-content: center;
@@ -17,6 +16,7 @@
     font-size: 16px;
     height: 3rem;
     width: 20%;
+    margin-top: 2%;
     background-color: rgb(0,191,165);
     border: none;
     border-radius: 5px;
@@ -24,15 +24,16 @@
     color: white;
     font-weight: 600;
     cursor: pointer;
-    z-index: 10;
+    z-index: 8;
 }
+
 .obligation_button_icon{
     width: 25px;
     height: 25px;
     margin-right: 4px;
 }
 
-.obligations select{
+.obligations_select{
     width: 20%;
     height: 3rem;
     border-radius: 5px;
@@ -43,9 +44,8 @@
    box-shadow: 0 2px 3px rgba( 0 0 0 / 0.25);
    cursor: pointer;
    z-index: 10;
-
-
 }
+
 .obligations_buttons{
     display: flex;
     justify-content: space-between;
@@ -114,7 +114,10 @@
 
 .createredimer{
     display: flex;
-    background-color: red;
+    position: absolute;
+    z-index: 10;
+    top:22%
+    
 }
 .createredimer_none{
     display: none;
