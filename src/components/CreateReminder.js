@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import '../styles/createreminder.css';
 import { showCreateReminder } from '../actions';
 import { AiOutlineClose } from 'react-icons/ai';
 import { AiTwotoneCloseCircle } from 'react-icons/ai';
+// import chroma from "chroma-js";
+// import Select from "react-select";
 
 
 
@@ -22,7 +24,7 @@ export const CreateReminder = () => {
         secondRedimer: '',
         howRemember: '',
     })
-    const createReminder = useSelector( state =>state.showCreateReminder)
+    const createReminder = useSelector(state => state.showCreateReminder)
 
 
     const handleChange = event => {
@@ -77,14 +79,15 @@ export const CreateReminder = () => {
                         <div>
                             <label htmlFor='text'>Color</label>
                             <select className='create_reminder_select_color' type='text' name='color' value={state.color} onChange={handleChange} >
-                                <option>&#11044;</option>
-                                <option>&#11044;</option>
-                                <option>&#11044;</option>
+                                <option value='green'>&#11044;&#8194;&#8194; Legal</option>
+                                <option value='blue'>&#11093;&#8194;&#8194; Pago impuestos </option>
+                                <option value='purple'>&#9711;&#8194;&#8194; Deudas financieras</option>
                             </select>
+                            
                         </div>
                         <div>
                             <label htmlFor='text'>Fecha del recordatorio</label>
-                            <input className='create_reminder_form_date' type='date' name='dateRedimer' value={state.dateRedimer}  onChange={handleChange}  placeholder='Seleciona una fecha' />
+                            <input className='create_reminder_form_date' type='date' name='dateRedimer' value={state.dateRedimer} onChange={handleChange} placeholder='Seleciona una fecha' />
                         </div>
                     </span>
                     <div>

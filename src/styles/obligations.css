@@ -1,5 +1,6 @@
 .obligations{
     display: flex;
+    flex-wrap: wrap;
     background-color: #EFEFEF;
 }
 
@@ -114,6 +115,7 @@
 
 .createredimer{
     display: flex;
+    flex-wrap: wrap;
     position: absolute;
     z-index: 10;
     top:22%
@@ -121,4 +123,14 @@
 }
 .createredimer_none{
     display: none;
+}
+
+@media (max-width:1150px){
+    .obligations_calendar{
+        width: 100%;
+    }
+    .createredimer{
+    width: 100%;
+    top:105vh;
+    }
 }

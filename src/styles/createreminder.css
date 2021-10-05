@@ -28,6 +28,7 @@
 
 .create_reminder_form{
     display: flex;  
+    flex-wrap: wrap;
 }
 
 .create_reminder_form section{
@@ -35,7 +36,8 @@
     flex-direction: column;
     justify-content: space-between;
     width: 40%;
-    margin: 5%;
+    min-width: 250px;
+    margin: 0 5% 5% 5%;
 }
 
 .create_reminder_form section div{
@@ -95,7 +97,9 @@
     outline: none;
 }
 
-
+/* .create_reminder_select_color option{
+    font-size: 90px;
+} */
 .create_reminder_form_date{
     height: 30px;
     border-radius: 5px;
@@ -119,4 +123,35 @@
     border-radius: 5px;
     cursor: pointer;
     position: absolute;
+}
+
+
+@media (max-width:1150px){
+    .create_reminder{
+    width: 94vw;
+    margin-left: 3vw;
+    }
+    .create_reminder span button{
+    margin: 38% 0 0 -22%;
+
+    }
+}
+@media (max-width:750px){
+
+    .create_reminder span button{
+    margin: 60% 0 0 -22%;
+    }
+
+}
+
+@media (max-width:664px){
+    .create_reminder{
+    height: auto;
+    }
+    .create_reminder_form section{
+        width: 90vw;
+    }
+    .create_reminder span button{
+        margin: -10% 0 0 70%;
+    }
 }
