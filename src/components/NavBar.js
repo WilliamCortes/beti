@@ -18,7 +18,7 @@ export const NavBar = () => {
             console.log(error.message)
         }
     }
-    console.log('Usuario: ', currentUser.email)
+   
     return (
 
         <header className='header'>
@@ -34,7 +34,6 @@ export const NavBar = () => {
 
                         <li>
                             <button className='nav_button' onClick={handleLogout} >Cerrar Sesión</button>
-
                         </li>
                     </ol>
                 </nav>

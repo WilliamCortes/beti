@@ -3,11 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import '../styles/createreminder.css';
 import { showCreateReminder } from '../actions';
 import { AiOutlineClose } from 'react-icons/ai';
-import { AiTwotoneCloseCircle } from 'react-icons/ai';
-// import chroma from "chroma-js";
-// import Select from "react-select";
-
-
 
 
 export const CreateReminder = () => {
@@ -19,7 +14,7 @@ export const CreateReminder = () => {
         firstRedimer: '',
         comment: '',
         typeRedimer: '',
-        color: '',
+        color: 'blue',
         dateRedimer: '',
         secondRedimer: '',
         howRemember: '',
@@ -78,10 +73,10 @@ export const CreateReminder = () => {
                     <span className='create_reminder_color_date'>
                         <div>
                             <label htmlFor='text'>Color</label>
-                            <select className='create_reminder_select_color' type='text' name='color' value={state.color} onChange={handleChange} >
-                                <option value='green'>&#11044;&#8194;&#8194; Legal</option>
-                                <option value='blue'>&#11093;&#8194;&#8194; Pago impuestos </option>
-                                <option value='purple'>&#9711;&#8194;&#8194; Deudas financieras</option>
+                            <select className='create_reminder_select_color' type='text' style={{color: state.color}} name='color' value={state.color} onChange={handleChange} >
+                                <option className='create_reminder_green' value='green' > &#11044;</option>
+                                <option className='create_reminder_blue' value='blue' >&#11044;</option>
+                                <option className='create_reminder_purple' value='purple'>&#11044;</option>
                             </select>
                             
                         </div>

@@ -125,6 +125,62 @@
     display: none;
 }
 
+.obligations_financialstate{
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba( 0 0 0 / 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.obligations_financialstate section{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f5f5;
+    width: 22vw;
+    height: 35vh;
+    top: 25vh;
+    left:40vw;
+    border-radius: 10px;
+    padding: 1.5%;
+    position: absolute;
+}
+
+.obligations_financialstate section input{
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba( 0 0 0 / 0.25);
+    margin-bottom: 20px;
+}
+.obligations_financialstate section a{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    width: 50%;
+    margin: 10px 0 0 25%;
+    height: 30px;
+    text-decoration: none;
+    padding-top: 10px;
+    background-color: rgb(0,191,165);
+    box-shadow: 0 2px 3px rgba( 0 0 0 / 0.25);
+    border-radius: 5px;
+}
+.obligations_green{
+    color: #8AC007;
+    font-size: 25px;
+}
+.obligations_blue{
+    color: blue;
+    font-size: 25px;
+
+}
+.obligations_purple{
+    color: purple;
+    font-size: 25px;
+}
 @media (max-width:1150px){
     .obligations_calendar{
         width: 100%;

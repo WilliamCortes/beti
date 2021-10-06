@@ -19,6 +19,7 @@ function App() {
             <PrivateRoute exact path='/betitest' component={BetiTest} />
             <PrivateRoute exact path='/results' component={Results} />
             <PrivateRoute exact path='/obligations' component={Obligations} />
+            <PrivateRoute exact path='/obligations/financialstate' component={Obligations} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/signup' component={SignUp} />
           </Switch>
