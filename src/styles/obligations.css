@@ -138,7 +138,7 @@
     display: flex;
     flex-direction: column;
     background-color: #f8f5f5;
-    width: 22vw;
+    width: 350px;
     height: 35vh;
     top: 25vh;
     left:40vw;
@@ -188,5 +188,12 @@
     .createredimer{
     width: 100%;
     top:105vh;
+    }
+}
+
+@media (max-width:1150px){
+
+    .obligations_financialstate section{
+        left: 5px;
     }
 }

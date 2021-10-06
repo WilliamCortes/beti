@@ -15,15 +15,12 @@ export const Obligations = () => {
 
     const dispatch = useDispatch();
     const createReminder = useSelector(state => state.showCreateReminder)
+    const reminders = useSelector(state => state.reminders)
     // const [createReminder, setCreateReminder] = useState(false)
     const history = useHistory();
 
-
-
     const [category, setCategory] = useState('Todos')
     const [date, setDate] = useState(new Date())
-
-
 
     const onChange = date => {
         setDate(date)
@@ -41,6 +38,9 @@ export const Obligations = () => {
             currentCategory[0].innerHTML += `<span><span class='obligations_purple'>&#11044;</span>&#8194;Deudas Finacieras&#8194;&#8194;&#8194;&#8194;</span>`
         }
     }
+
+    console.log(reminders)
+    // const locale = 'fr-CA';
     return (
         <>
             <NavBar />
@@ -61,7 +61,17 @@ export const Obligations = () => {
                         </select>
                     </div>
                     <div>
-                        <Calendar onChange={onChange} value={date} />
+                        <Calendar onChange={onChange} value={date} onClickDay={(value, event) => alert('Clicked day: ', value)}
+                            // formatDay={
+                            //     (date) => new Intl.DateTimeFormat(
+                            //         locale,
+                            //         {
+                            //             year: "numeric",
+                            //             month: "2-digit",
+                            //             day: "2-digit"
+                            //         }).format(date)
+                            // }
+                        />
                     </div>
                     <div className={createReminder ? 'createredimer' : 'createredimer_none'} >
                         <CreateReminder />
