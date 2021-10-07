@@ -29,15 +29,15 @@ export const Obligations = () => {
     const handleChange = (event) => {
         setCategory(event.target.value)
     }
-    let aprove = true
-    const currentCategory = document.getElementsByClassName('react-calendar__viewContainer')
-    if (currentCategory.length && aprove === true) {
-        if (currentCategory[0]?.childElementCount < 4) {
-            currentCategory[0].innerHTML += `<span><span class='obligations_green'>&#11044;</span>&#8194;Legal&#8194;&#8194;&#8194;&#8194;</span>`
-            currentCategory[0].innerHTML += `<span><span class='obligations_blue'>&#11044;</span>&#8194;Pago impuestos&#8194;&#8194;&#8194;&#8194;</span>`
-            currentCategory[0].innerHTML += `<span><span class='obligations_purple'>&#11044;</span>&#8194;Deudas Finacieras&#8194;&#8194;&#8194;&#8194;</span>`
-        }
-    }
+
+    // const currentCategory = document.getElementsByClassName('react-calendar__viewContainer')
+    // if (currentCategory.length) {
+    //     if (currentCategory[0]?.childElementCount < 4) {
+    //         currentCategory[0].innerHTML += `<span><span class='obligations_green'>&#11044;</span>&#8194;Legal&#8194;&#8194;&#8194;&#8194;</span>`
+    //         currentCategory[0].innerHTML += `<span><span class='obligations_blue'>&#11044;</span>&#8194;Pago impuestos&#8194;&#8194;&#8194;&#8194;</span>`
+    //         currentCategory[0].innerHTML += `<span><span class='obligations_purple'>&#11044;</span>&#8194;Deudas Finacieras&#8194;&#8194;&#8194;&#8194;</span>`
+    //     }
+    // }
 
     console.log(reminders)
     // const locale = 'fr-CA';
@@ -61,7 +61,10 @@ export const Obligations = () => {
                         </select>
                     </div>
                     <div>
-                        <Calendar onChange={onChange} value={date} onClickDay={(value, event) => alert('Clicked day: ', value)}
+                        <Calendar
+                            onChange={onChange}
+                            value={date}
+                            onClickDay={(value, event) => alert('Clicked day: ', value)}
                             // formatDay={
                             //     (date) => new Intl.DateTimeFormat(
                             //         locale,
@@ -71,7 +74,18 @@ export const Obligations = () => {
                             //             day: "2-digit"
                             //         }).format(date)
                             // }
+                            locale='es-419'
+                            // tileContent={({ activeStartDate, date, view }) => view === 'month' && date.getDay() === 0 ? <p>Domingo alegre!</p> : null}
+                        // formatShortWeekday={(locale, date) => formatDate(date, 'dd')}
+
                         />
+                        <span className='obligations_options'>
+                            <span><span class='obligations_green'>&#11044;</span>&#8194;Legal&#8194;&#8194;&#8194;&#8194;</span>
+                            <span><span class='obligations_blue'>&#11044;</span>&#8194;Pago impuestos&#8194;&#8194;&#8194;&#8194;</span>
+                            <span><span class='obligations_purple'>&#11044;</span>&#8194;Deudas Finacieras&#8194;&#8194;&#8194;&#8194;</span>
+                        </span>
+                        {console.log(date)}
+                        {date.toString()}
                     </div>
                     <div className={createReminder ? 'createredimer' : 'createredimer_none'} >
                         <CreateReminder />

@@ -85,9 +85,11 @@
 .react-calendar__viewContainer{
     background-color: white;
     padding: 3%;
+    padding-bottom: 5%;
     border-radius: 5px;
    box-shadow: 0 2px 3px rgba( 0 0 0 / 0.25);
     margin-top: -4%;
+    position: relative;
 }
 
 .react-calendar__month-view__weekdays__weekday{
@@ -108,7 +110,26 @@
 }
 .react-calendar__month-view__days__day:hover{
     background-color: rgb(0,191,165, 0.3);
+}
 
+
+.obligations_options{
+    background-color: transparent;
+    margin: -50px 0 0 28px;
+    position: absolute;
+}
+.obligations_green{
+    color: #8AC007;
+    font-size: 25px;
+}
+.obligations_blue{
+    color: blue;
+    font-size: 25px;
+
+}
+.obligations_purple{
+    color: purple;
+    font-size: 25px;
 }
 
 /* modal */
@@ -168,19 +189,8 @@
     box-shadow: 0 2px 3px rgba( 0 0 0 / 0.25);
     border-radius: 5px;
 }
-.obligations_green{
-    color: #8AC007;
-    font-size: 25px;
-}
-.obligations_blue{
-    color: blue;
-    font-size: 25px;
 
-}
-.obligations_purple{
-    color: purple;
-    font-size: 25px;
-}
+
 @media (max-width:1150px){
     .obligations_calendar{
         width: 100%;
